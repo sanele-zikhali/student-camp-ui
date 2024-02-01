@@ -1,0 +1,138 @@
+@import "colors";
+@import "mixin";
+
+// Main Widgets
+.article-card {
+  padding: 6px;
+  border: 1px solid $border-color;
+  display: flex;
+  gap: 6px;
+  border-radius: 2px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .article-details {
+    .article-btn {
+      margin-top: 10px;
+    }
+  }
+
+  .article-tags {
+    margin: 8px 0;
+    .tag {
+      background: $white;
+      border-radius: 2px;
+      padding: 2px 6px;
+      border: 1px solid $border-color;
+    }
+  }
+  .article-date {
+    font-size: 14px;
+    color: darken($border-color, 20);
+  }
+  .article-thumbnail {
+    width: 200px;
+    height: 100%;
+    border-radius: 2px;
+
+    img {
+      @include imageFit();
+      opacity: 0.8;
+      border-radius: 2px;
+    }
+  }
+}
+// Main Widgets ends
+
+// New and Trending
+.trending-section {
+  padding: 60px 150px;
+
+  .trending-content {
+    margin-top: 30px;
+  }
+}
+// New and Trending ends
+// Recently asked questions
+.recently-asked-questions {
+  padding: 60px 150px;
+  background: $white;
+
+  .recently-questions-wrapper {
+    margin-top: 30px;
+
+    .question-card {
+      border: 1px solid $border-color;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      .question-card-divider {
+        height: 1px;
+        width: 100%;
+        background: $border-color;
+      }
+
+      .question-card-header {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+
+        .profile-name {
+          margin-left: 10px;
+
+          a {
+            text-decoration: none;
+            color: $dark !important;
+          }
+        }
+        .profile-pic {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          border: 2px solid $border-color;
+
+          img {
+            @include imageFit();
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .question-card-body {
+        padding: 10px;
+
+        .question-name {
+          background: lighten($dark, 82);
+          border: 1px solid $border-color;
+          padding: 6px;
+          //   border-top: 3px solid $dark;
+          font-size: clamp(1rem, 3vw, 1.1rem);
+        }
+        .question-body-action {
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          .action-text span {
+            font-size: 15px;
+            opacity: 0.9;
+
+            a {
+              font-weight: bolder;
+              text-decoration: none;
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Recently asked questions ends

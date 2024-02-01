@@ -1,0 +1,54 @@
+@import "colors";
+@import "mixin";
+@import "media";
+
+footer {
+  background: $light;
+  padding: 60px 150px;
+
+  .btn {
+    margin-top: 6px !important;
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+    .footer-text {
+      margin-bottom: 4px;
+    }
+
+    .footer-col {
+      input,
+      select {
+        width: 100%;
+        border-radius: 2px;
+        transition: 0.4s;
+      }
+      .logo {
+        text-decoration: none;
+        color: $dark;
+      }
+      ul {
+        list-style: none;
+
+        li a {
+          text-decoration: none;
+          color: $dark;
+          transition: 0.3s;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

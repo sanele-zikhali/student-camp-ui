@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Camp</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--Auth Form-->
+    <section class="auth-forms-section">
+        <div class="auth-loader" id="loader">
+            <div class="loader-wrapper">
+                <div class="loader"></div>
+            </div>
+            <h2>Loading</h2>
+            <p>Please wait...</p>
+        </div>
+        <a class="logo-link" href="#">
+            <h1 class="logo">Student Camp.</h1>
+        </a>
+        <div class="auth-forms-content">
+            <h1><span>Sign</span> In</h1>
+            <p class="form-alert"><i class="fa fa-exclamation-triangle inline-icon"></i> Please your credentials to
+                login.</p>
+            <form class="auth-form login" id="login" action="">
+                <div class="form-group">
+                    <label for="email">Username:</label>
+                    <input type="text" autocomplete="off" name="username" class="login-email" id="login-username"
+                        placeholder="email@studentcamp.com">
+                    <small class="text-input-validator" id="login-username-validator"> <i
+                            class="fa fa-exclamation-triangle"></i> Username cannot be empty!</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" autocomplete="off" name="password" id="login-password"
+                        placeholder="Minimum of 6 characters.">
+                    <small class="text-input-validator" id="login-password-validator"> <i
+                            class="fa fa-exclamation-triangle"></i> Password cannot be empty!</small>
+                </div>
+                <p class="forgot-password">Forgot Password? <a href="#">Reset now</a></p>
+                <button class="btn btn-primary">Sign in <i class="btn-icon fa fa-sign-in-alt"></i> </button>
+            </form>
+            <div class="auth-forms-links">
+                <p><b>Not registered? </b><a href="#">register here</a></p>
+                <a href="#">Go Back Home</a>
+            </div>
+        </div>
+
+    </section>
+    <!--Auth Form ends-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/form.validation.js"></script>
+</body>
+
+</html>

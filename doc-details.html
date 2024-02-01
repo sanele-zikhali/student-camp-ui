@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Camp</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header starts -->
+    <header>
+        <div class="top-nav">
+            <p class="contact-info-text">For contact Info.</p>
+            <div class="links">
+                <div class="link-wrapper">
+                    <div class="link-icon"><i class="icon fa fa-envelope-open-text"></i></div>
+                    <p>sanelecarl56@gmail.com</p>
+                </div>
+                <div class="link-wrapper">
+                    <div class="link-icon"><i class="icon fa fa-phone-square"></i></div>
+                    <p>(+27)76 975 7684</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="#" class="logo">
+                <h3 class="logo-text">Student Camp</h3>
+            </a>
+            <div class="side-link">
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Q & A</a></li>
+                    <li><a href="#">Sign In</a></li>
+                </ul>
+                <div class="burger-menu-toggler" id="menuToggler">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <span class="search" id="searchToggler"><i class="fa fa-search"></i></span>
+            </div>
+
+            <div class="search-wrapper-section" id="searchWrapper">
+                <form action="">
+                    <div class="close-search">
+                        <div id="closeSearchWrapper" class="close-controller"><i class="fa fa-times"></i></div>
+                    </div>
+                    <div class="search-wrapper-content">
+                        <div class="search-input">
+                            <i class="input-icon fa fa-search"></i>
+                            <input autocomplete="off" type="search" name="searchQuery" id="searchQuery"
+                                placeholder="Search any tutoral with topic name or category.. ">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <!-- Header ends -->
+    <!-- Leaning Docs -->
+    <section class="learning-docs">
+        <h1 class="main-title"><span>Document</span> Details</h1>
+        <div class="doc-details-wrapper">
+            <div class="doc-details-col">
+                <div class="doc-details-image">
+                    <img src="images/user.jpg" alt="">
+                </div>
+            </div>
+            <div class="doc-details-col">
+                <div class="doc-details-info">
+                    <h2><span>More</span> Details</h2>
+                    <div class="doc-details-group">
+                        <p class="label">Title</p>
+                        <p>Introduction Programming</p>
+                    </div>
+                    <div class="doc-details-group">
+                        <p class="label">Description</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat vel labore enim maiores eum
+                            reprehenderit voluptatibus, ipsa facilis dolorem! Nostrum?</p>
+                    </div>
+                    <div class="doc-details-action">
+                        <a href="#" class="btn btn-primary">Download <i class="fa fa-download btn-icon"></i> </a>
+                        <a href="#" class="btn btn-dark">View <i class="fa fa-eye btn-icon"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Leaning Docs Ends -->
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <a href="#" class="logo">
+                    <h3 class="logo-text">Student Camp</h3>
+                </a>
+                <p>Best Online Tech School For all students around the world.</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-text">Useful Links</p>
+                <ul>
+                    <li><a href="#"><i class="inline-icon fa fa-check-circle"></i> Home</a></li>
+                    <li><a href="#"><i class="inline-icon fa fa-check-circle"></i> Our Blog</a></li>
+                    <li><a href="#"><i class="inline-icon fa fa-check-circle"></i> Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="logo-text">Subscribe to Our Newsletter.</h3>
+                <p class="footer-text">Simply fill with your email to subscribe.</p>
+                <form action="">
+                    <div class="form-group">
+                        <label for="emailAddress" class="danger-label">Required <span class="label-icon">*</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="input-icon fa fa-envelope"></i>
+                            <input type="text" placeholder="Email Address here..." name="emailAddress"
+                                id="emailAddress">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-1">Subscribe <i
+                            class="fa fa-paper-plane btn-icon"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>All Right Reserved <b>Carl Technologies</b> &copy; 2023</p>
+        </div>
+    </footer>
+    <!--Footer ends-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            let searchWrapper = $("#searchWrapper");
+            let searchToggler = $("#searchToggler");
+            let searchWrapperHider = $("#closeSearchWrapper");
+            let menuToggler = $("#menuToggler");
+            let menuWrapper = $(".menu");
+
+            menuToggler.click(() => {
+                menuWrapper.toggleClass("menu-active");
+            })
+
+            searchToggler.click(() => {
+                searchWrapper.slideDown(400);
+            })
+            searchWrapperHider.click(() => {
+                searchWrapper.slideUp(400)
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Titillium-Bold";
+  src: url(.././fonts/TitilliumWeb-Bold.ttf);
+}
+@font-face {
+  font-family: "Titillium";
+  src: url(.././fonts/TitilliumWeb-Regular.ttf);
+}
+@font-face {
+  font-family: "Billabong";
+  src: url(.././fonts/Billabong.ttf);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Titillium-Bold", Titillium-Bold;
+}
+
+p,
+span,
+a,
+label,
+button,
+input,
+::placeholder,
+textarea,
+small {
+  font-weight: 400;
+  font-family: "Titillium", Titillium;
+}

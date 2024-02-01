@@ -1,0 +1,234 @@
+@import "mixin";
+
+@media (max-width: 1100px) {
+  @include setInlinePadding(90);
+}
+@media (max-width: 997px) {
+  .docs-section {
+    grid-template-columns: 6fr 4fr !important;
+  }
+  .docs-list-wrapper {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .fields-split {
+    flex-direction: column;
+  }
+  .update-profile-wrapper {
+    .form-group {
+      input {
+        min-width: none;
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 950px) {
+  .doc-details-wrapper {
+    grid-template-columns: 3fr 6fr !important;
+  }
+}
+@media (max-width: 800px) {
+  @include setInlinePadding(40);
+}
+@media (max-width: 700px) {
+  @include setInlinePadding(20);
+
+  #searchToggler {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .docs-section {
+    grid-template-columns: 1fr !important;
+  }
+  .docs-list-wrapper {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .doc-details-wrapper {
+    grid-template-columns: 4fr 6fr !important;
+
+    .doc-details-info {
+      h2 {
+        margin-bottom: 10px !important;
+      }
+      .doc-details-action {
+        margin-top: 15px !important;
+      }
+    }
+  }
+  .footer-content {
+    grid-template-columns: 1fr !important;
+  }
+  .profile-cover-profile-pic {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  .profile-content {
+    .profile-username {
+      .user {
+        padding-left: 92px !important;
+      }
+      .biography {
+        padding-left: 0 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .docs-list-wrapper {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 530px) {
+  .article-card {
+    .article-thumbnail {
+      width: 90px;
+      height: 80px !important;
+    }
+    .article-details {
+      display: flex;
+      align-items: center;
+
+      .btn {
+        height: 30px !important;
+        padding-inline: 8px !important;
+        font-size: 14px !important;
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .doc-details-wrapper {
+    grid-template-columns: 1fr 1fr !important;
+
+    .doc-details-info {
+      h2 {
+        margin-bottom: 10px !important;
+      }
+      .doc-details-action {
+        margin-top: 15px !important;
+      }
+    }
+  }
+  input {
+    width: 100%;
+  }
+  .top-nav {
+    height: 50% !important;
+    flex-direction: column;
+    // padding: 3px 0;
+    justify-content: flex-start;
+    align-items: start;
+
+    .links {
+      background: $primary;
+      padding: 3px 6px;
+      border-top-right-radius: 2px;
+      border-top-left-radius: 2px;
+      width: 100%;
+      justify-content: space-between;
+      .link-wrapper {
+        .link-icon {
+          margin: 0 !important;
+          margin-right: 4px !important;
+        }
+      }
+    }
+
+    .contact-info-text {
+      font-size: 13px;
+    }
+  }
+  nav {
+    position: relative;
+    height: 50% !important;
+
+    .logo {
+      .logo-text {
+        font-size: 24px !important;
+      }
+    }
+    .side-link {
+      .burger-menu-toggler {
+        display: block !important;
+      }
+    }
+
+    ul {
+      position: absolute;
+      border-top: 2px solid $border-color;
+      padding: 20px;
+      left: 100%;
+
+      top: 100%;
+      z-index: -1;
+      background: $dark;
+      width: 100%;
+      display: block;
+      flex-direction: column;
+      transition: 0.4s;
+
+      li:not(:first-child),
+      li:not(:last-child) {
+        margin: 4px 0;
+      }
+      li a {
+        margin: 0;
+        font-size: 17px;
+        color: $white;
+        display: inline-block;
+
+        &:hover {
+          margin-left: 6px;
+          border-color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .doc-details-image {
+    height: 350px !important;
+  }
+  .doc-details-wrapper {
+    grid-template-columns: 1fr !important;
+
+    .doc-details-info {
+      h2 {
+        margin-bottom: 10px !important;
+      }
+      .doc-details-action {
+        margin-top: 15px !important;
+      }
+    }
+  }
+  .auth-forms-content {
+    form {
+      .form-group {
+        input {
+          min-width: 350px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .auth-forms-content {
+    form {
+      .form-group {
+        input {
+          min-width: 300px;
+        }
+      }
+    }
+  }
+}

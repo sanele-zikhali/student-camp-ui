@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Camp</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header starts -->
+    <header>
+        <div class="top-nav">
+            <p class="contact-info-text">For contact Info.</p>
+            <div class="links">
+                <div class="link-wrapper">
+                    <div class="link-icon"><i class="icon fa fa-envelope-open-text"></i></div>
+                    <p>sanelecarl56@gmail.com</p>
+                </div>
+                <div class="link-wrapper">
+                    <div class="link-icon"><i class="icon fa fa-phone-square"></i></div>
+                    <p>(+27)76 975 7684</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="#" class="logo">
+                <h3 class="logo-text">Student Camp</h3>
+            </a>
+            <div class="side-link">
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Q & A</a></li>
+                    <li><a href="#">Sign In</a></li>
+                </ul>
+                <div class="burger-menu-toggler" id="menuToggler">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <span class="search" id="searchToggler"><i class="fa fa-search"></i></span>
+            </div>
+
+            <div class="search-wrapper-section" id="searchWrapper">
+                <form action="">
+                    <div class="close-search">
+                        <div id="closeSearchWrapper" class="close-controller"><i class="fa fa-times"></i></div>
+                    </div>
+                    <div class="search-wrapper-content">
+                        <div class="search-input">
+                            <i class="input-icon fa fa-search"></i>
+                            <input autocomplete="off" type="search" name="searchQuery" id="searchQuery"
+                                placeholder="Search any tutoral with topic name or category.. ">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <!-- Header ends -->
+    <!--Profile-->
+    <section class="profile-section">
+        <div class="profile-cover">
+            <div class="profile-cover-profile-pic">
+                <img src="images/user.jpg" alt="">
+            </div>
+        </div>
+        <div class="profile-content">
+            <div class="update-profile-wrapper">
+                <h3><span>@Robert Downey Jr</span></h3>
+                <h2 class="profile-content-title">Update Profile</h2>
+                <p>Keep your profile up to date.</p>
+
+                <form action="">
+                    <div class="fields-split">
+                        <div class="fields">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" name="username" placeholder="John Doe" id="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="firstname">First name:</label>
+                                <input type="text" name="firstname" placeholder="John" id="firstname">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname">Last name:</label>
+                                <input type="text" placeholder="Doe" name="lastname" id="firstname">
+                            </div>
+                        </div>
+                        <div class="fields">
+                            <div class="form-group">
+                                <label for="emailAdress">Email Address:</label>
+                                <input type="email" placeholder="email@gmail.com" name="emailAdress" id="emailAdress">
+                            </div>
+                            <div class="form-group">
+                                <label for="website">Website:</label>
+                                <input type="text" placeholder="https://ww.website.com" name="website" id="website">
+                            </div>
+                            <div class="form-group">
+                                <label for="facebook-link">Facebook Link:</label>
+                                <input type="text" placeholder="https://www.facebook.com" name="facebook-link"
+                                    id="facebook-link">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Save Changes <i class="fa fa-save btn-icon"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <!--Profile ends-->
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <a href="#" class="logo">
+                    <h3 class="logo-text">Student Camp</h3>
+                </a>
+                <p>Best Online Tech School For all students around the world.</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-text">Useful Links</p>
+                <ul>
+                    <li><a href="#"><i class="inline-icon fa fa-check-circle"></i> Home</a></li>
+                    <li><a href="#"><i class="inline-icon fa fa-check-circle"></i> Our Blog</a></li>
+                    <li><a href="#"><i class="inline-icon fa fa-check-circle"></i> Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="logo-text">Subscribe to Our Newsletter.</h3>
+                <p class="footer-text">Simply fill with your email to subscribe.</p>
+                <form action="">
+                    <div class="form-group">
+                        <label for="emailAddress" class="danger-label">Required <span class="label-icon">*</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="input-icon fa fa-envelope"></i>
+                            <input type="text" placeholder="Email Address here..." name="emailAddress"
+                                id="emailAddress">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-1">Subscribe <i
+                            class="fa fa-paper-plane btn-icon"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>All Right Reserved <b>Carl Technologies</b> &copy; 2023</p>
+        </div>
+    </footer>
+    <!--Footer ends-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            let searchWrapper = $("#searchWrapper");
+            let searchToggler = $("#searchToggler");
+            let searchWrapperHider = $("#closeSearchWrapper");
+            let menuToggler = $("#menuToggler");
+            let menuWrapper = $(".menu");
+
+            menuToggler.click(() => {
+                menuWrapper.toggleClass("menu-active");
+            })
+
+            searchToggler.click(() => {
+                searchWrapper.slideDown(400);
+            })
+            searchWrapperHider.click(() => {
+                searchWrapper.slideUp(400)
+            })
+        })
+    </script>
+</body>
+
+</html>

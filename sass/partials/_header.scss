@@ -1,0 +1,166 @@
+@import "typography";
+@import "colors";
+@import "mixin";
+
+header {
+  //   padding-inline: 150px;
+  height: 100px;
+  background: $white;
+  width: 100%;
+  position: fixed;
+  z-index: 5000;
+  border-bottom: 1px solid lighten($dark, 70);
+
+  .top-nav {
+    background: $dark;
+    width: 100%;
+    color: $white;
+    padding-inline: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30%;
+
+    .contact-info-text {
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    .links {
+      display: flex;
+      align-items: center;
+
+      .link-wrapper {
+        display: flex;
+        align-items: center;
+
+        p {
+          font-size: 15px;
+        }
+
+        .link-icon {
+          margin-right: 6px;
+
+          .icon {
+            font-size: 18px;
+          }
+        }
+
+        &:last-child {
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+  nav {
+    padding-inline: 150px;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    .burger-menu-toggler {
+      cursor: pointer;
+      .bar {
+        width: 24px;
+        height: 2px;
+        background: $dark;
+
+        &:not(:first-child),
+        &:not(:last-child) {
+          margin: 3px 0;
+        }
+      }
+      display: none;
+    }
+
+    a {
+      color: $dark;
+      text-decoration: none;
+    }
+
+    .logo {
+      .logo-text {
+        font-family: "Billabong";
+        font-size: 30px;
+      }
+    }
+
+    .side-link {
+      display: flex;
+      align-items: center;
+    }
+    ul {
+      display: flex;
+      list-style: none;
+
+      li:not(:first-child),
+      li:not(:last-child) {
+        margin-inline: 8px;
+      }
+
+      li a {
+        transition: 0.3s;
+        border-bottom: 2px solid transparent;
+        &:hover {
+          border-color: $dark;
+        }
+      }
+    }
+
+    .search {
+      margin-left: 80px;
+      cursor: pointer;
+    }
+
+    .search-wrapper-section {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background: $dark;
+      width: 100%;
+      padding: 10px 150px;
+      display: none;
+
+      .close-search {
+        display: flex;
+        justify-content: flex-end;
+
+        .close-controller {
+          width: 20px;
+          height: 20px;
+          @include flexAll();
+          background: $danger;
+          color: $dark;
+          border-radius: 2px;
+          cursor: pointer;
+          font-size: 14px;
+        }
+      }
+
+      .search-wrapper-content {
+        .search-input {
+          display: flex;
+          align-items: center;
+          border-bottom: 1px solid $white;
+
+          .input-icon {
+            color: $white;
+            font-weight: lighter;
+          }
+          input {
+            border: none;
+            background: none;
+            outline: none;
+            display: block;
+            font-size: 17px;
+            width: 98%;
+            color: $white;
+            padding: 10px 0 10px 20px;
+          }
+        }
+      }
+    }
+  }
+}

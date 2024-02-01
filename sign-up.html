@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Camp</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--Auth Form-->
+    <section class="auth-forms-section">
+        <div class="auth-loader" id="reg-loader">
+            <div class="loader-wrapper">
+                <div class="loader"></div>
+            </div>
+            <h2>Loading</h2>
+            <p>Please wait...</p>
+        </div>
+        <a class="logo-link" href="#">
+            <h1 class="logo">Student Camp.</h1>
+        </a>
+        <div class="auth-forms-content">
+            <h1>Register</h1>
+            <p class="form-alert"><i class="fa fa-exclamation-triangle inline-icon"></i> Please fill all the
+                details to register.</p>
+            <form class="auth-form register" id="register" action="">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" autocomplete="off" name="username" id="register-username"
+                        placeholder="Student Camp">
+                    <small class="text-input-validator" id="register-username-validator"> <i
+                            class="fa fa-exclamation-triangle"></i> Username cannot be empty!</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Adress:</label>
+                    <input type="email" autocomplete="off" name="email" id="register-email"
+                        placeholder="email@studentcamp.com">
+                    <small class="text-input-validator" id="register-email-validator"> <i
+                            class="fa fa-exclamation-triangle"></i> Email cannot be empty!</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" autocomplete="off" name="password" id="register-password"
+                        placeholder="Minimum of 6 characters.">
+                    <small class="text-input-validator" id="register-password-validator"> <i
+                            class="fa fa-exclamation-triangle"></i> Password cannot be empty!</small>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" autocomplete="off" name="confirm-password" id="register-confirm-password"
+                        placeholder="Minimum of 6 characters.">
+                    <small class="text-input-validator" id="register-confirm-password-validator"> <i
+                            class="fa fa-exclamation-triangle"></i> Confirm Password cannot be empty!</small>
+                </div>
+                <button class="btn btn-primary">Sign up <i class="btn-icon fa fa-check-circle"></i> </button>
+            </form>
+            <div class="auth-forms-links">
+                <p><b>Already registered? </b><a href="#">sign in here</a></p>
+                <a href="#">Go Back Home</a>
+            </div>
+        </div>
+
+    </section>
+    <!--Auth Form ends-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/form.validation.js"></script>
+</body>
+
+</html>

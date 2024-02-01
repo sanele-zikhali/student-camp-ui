@@ -1,0 +1,65 @@
+@import "colors";
+@import "mixin";
+
+.hero-section {
+  padding: 140px 150px 40px 150px;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.616)),
+    url(.././images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  color: $white;
+
+  .hero-tagline {
+    background: #0000005d;
+    padding: 4px 8px;
+    border-radius: 2px;
+    border-top: 3px solid $white;
+    margin-bottom: 40px;
+
+    span {
+      font-family: "Titillium-Bold" !important;
+    }
+  }
+  .hero-title {
+    font-size: clamp(1.5rem, 2vw, 2.8rem);
+  }
+
+  .follow-us {
+    margin: 40px 0 20px 0;
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: $dark;
+
+      &:nth-child(2) {
+        margin-inline: 10px;
+      }
+
+      .social-link-wrapper {
+        width: 30px;
+        height: 30px;
+        background: $white;
+        color: $dark;
+        @include flexAll();
+        border-radius: 2px;
+        transition: 0.4s;
+
+        &:hover {
+          color: lighten($dark, 20);
+        }
+      }
+    }
+  }
+
+  .hero-buttons-section {
+    margin-top: 30px;
+  }
+}

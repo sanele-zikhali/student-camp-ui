@@ -1,0 +1,26 @@
+@mixin flexAll() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin imageFit() {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@mixin setInlinePadding($Padding) {
+  nav,
+  footer,
+  .recently-asked-questions,
+  .trending-section,
+  .hero-section,
+  .top-nav,
+  .search-wrapper-section,
+  .auth-forms-section,
+  .profile-content,
+  .profile-cover,
+  .learning-docs {
+    padding-inline: $Padding + px !important;
+  }
+}

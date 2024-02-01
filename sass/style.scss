@@ -1,0 +1,194 @@
+@import "partials/colors";
+@import "partials/footer";
+@import "partials/header";
+@import "partials/hero";
+@import "partials/main";
+@import "partials/media";
+@import "partials/typography";
+@import "partials/mixin";
+@import "partials/auth-forms";
+@import "partials/profile";
+@import "partials/learning-docs";
+@import "partials/question-section";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.menu-active {
+  left: 0;
+}
+body {
+  background: $light;
+}
+.inline-text-icon {
+  margin-right: 10px;
+}
+.main-title {
+  position: relative;
+  display: inline-block;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 120%;
+    width: 30%;
+    height: 4px;
+    background: $dark;
+  }
+}
+form {
+  button {
+    margin-top: 10px;
+  }
+}
+.ml-1 {
+  margin-left: 6px;
+}
+.mt-1 {
+  margin-top: 6px;
+}
+.mr-1 {
+  margin-right: 6px;
+}
+.mb-1 {
+  margin-bottom: 6px;
+}
+input,
+select {
+  outline: none;
+  display: flex;
+  height: 35px;
+  align-items: center;
+  min-width: 400px;
+  padding-inline: 8px;
+  border: none;
+  border: 1px solid $border-color;
+  font-size: 15px;
+  border-radius: 2px;
+
+  &:focus {
+    border-color: $primary;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  border: none;
+  outline: none;
+  height: 35px;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  background: $light;
+  padding-inline: 10px;
+  color: $dark;
+  border-radius: 2px;
+  transition: 0.4s;
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+  justify-content: space-between;
+}
+.btn-sm {
+  height: 30px !important;
+  padding-inline: 8px !important;
+  font-size: 14px !important;
+}
+
+.form-group {
+  &:not(:nth-child(1)) {
+    margin-top: 4px;
+  }
+  label {
+    font-size: 15px;
+    display: block;
+  }
+  .input-wrapper {
+    position: relative;
+    .input-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 2%;
+      opacity: 0.7;
+    }
+    input {
+      width: 100%;
+      padding-left: 30px;
+      font-size: 15px;
+    }
+  }
+}
+.text-bold {
+  font-family: "Titillium-Bold" !important;
+}
+.btn-success {
+  background: $success;
+  color: $dark;
+
+  &:hover {
+    background: lighten($success, 6);
+  }
+}
+.form-split {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+.fields-split {
+  display: flex;
+  gap: 10px;
+}
+.danger-label {
+  .label-icon {
+    font-size: 16px;
+    color: darken($danger, 25) !important;
+  }
+}
+.btn-icon {
+  margin-left: 8px;
+}
+.btn-outline-white {
+  border: 1px solid $white;
+  color: $light;
+  background: none;
+
+  &:hover {
+    background: $white;
+    color: $dark;
+  }
+}
+.btn-primary {
+  background: $primary;
+  color: $white;
+
+  &:hover {
+    background: lighten($primary, 6);
+  }
+}
+.btn-secondary {
+  background: $secondary;
+  color: $white;
+
+  &:hover {
+    background: lighten($secondary, 6);
+  }
+}
+.btn-dark {
+  background: $dark;
+  color: $white;
+
+  &:hover {
+    background: lighten($dark, 6);
+  }
+}
+.btn-light {
+  background: $white;
+  color: $dark;
+
+  &:hover {
+    background: lighten($white, 6);
+  }
+}
